@@ -1,5 +1,4 @@
 <?php
-
  include '../classes/databaseconnection.php';
   include '../classes/ModelTalkToDB.PHP';
   include 'signupfunctions.php';
@@ -13,12 +12,18 @@
   }
   else {
 
-    $email = $_POST['email'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $comfirmPassword = $_POST['passwordConfirm'];
+  $email = $_POST['email'];
+  $username = $_POST['username'];
+  $cellphone = $_POST['mobileNumber'];
+  $password = $_POST['password'];
+  $comfirmPassword = $_POST['passwordConfirm'];
 
-         if (fieldEmpty($email ,$username,$password,$comfirmPassword )!==false)
+    $signingUp = new SignUp($email,$username,$cellphone,$password,$comfirmPassword);
+    $signingUp ->  register();
+
+
+
+         /*if (fieldEmpty($email ,$username,$password,$comfirmPassword )!==false)
          {
           header("Location: ../Frontpages/signup.php?error=EmptyInput");
           exit();
@@ -49,12 +54,12 @@
                     $signupObject->setemail($email);
                     $signupObject->setusername($username);
                     $signupObject->setpassword($password);
-                    
+
                 $saveemail= $signupObject->getemail();
                 $saveusername=$signupObject ->getusername();
                 $savepassword=$signupObject->getpassword();
                $sendToDb = new control();
               $sendToDb->registering($saveemail,$saveusername,$savepassword);
 
-        }
+        }*/
   }

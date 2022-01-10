@@ -9,6 +9,7 @@
      <form class="" action="../ObjectCreation/signupObject.php" method="POST">
        <input  type="text" name="email" placeholder="Email"><br> <br>
        <input type="text" name="username" placeholder="Username"> <br> <br>
+       <input type="text" name="mobileNumber" placeholder="cellphone Number"> <br> <br>
        <input type="password" name="password" placeholder="Password"><br> <br>
        <input type="password" name="passwordConfirm" placeholder="Comfirm Password"><br> <br>
        <button type="submit" class ="btnreg" name="submit">Sign Up</button><br> <br>
@@ -16,31 +17,27 @@
           if(isset($_GET['error']))
           {
 
-            if ($_GET['error']=="EmptyInput")
-           {
-              echo '<p style ="color: #DB0808">please fill up all input box to continue</p> <br>';
-            }
-            else if($_GET['error']=="invalidUsername")
+            if ($_GET['error'] == "emptyvariable")
             {
-              echo '<p style ="color: #DB0808">please make sure that your username includes alphabet and numbers only</p> <br>';
-            }
-            else if($_GET['error']=="invalidEmail")
+              echo '<p style ="color: #DB0808 ;padding-left:33px;">please fill up all input box to continue</p> <br>';
+            }elseif ($_GET['error'] == "invalidEmail")
             {
-              echo '<p style ="color: #DB0808">please make sure that your email is in corrent format</p> <br>';
-            }
-            else if($_GET['error']=="passwordLength")
+                echo '<p style ="color: #DB0808">please make sure that your email is in corrent format</p> <br>';
+            }elseif ($_GET['error'] == "invalidUsername")
             {
-              echo '<p style ="color: #DB0808">please make sure that your password is more than 8 charector</p> <br>';
+                echo '<p style ="color: #DB0808">please make sure that your username includes alphabet and numbers only</p> <br>';
             }
-
-            else if($_GET['error']=="passwordNotEqual")
+            elseif ($_GET['error'] == "invalidpwdLength")
             {
-              echo '<p style ="color: #DB0808">please make sure that your passwords match</p> <br>';
+                  echo '<p style ="color: #DB0808">please make sure that your password is more than 5 charector</p> <br>';
             }
-
-            else if($_GET['error']=="userExist")
+            elseif ($_GET['error'] == "pwdNotMatch")
             {
-              echo '<p style ="color: #DB0808">please try out another username , this one is already taken</p> <br>';
+                  echo '<p style ="color: #DB0808;padding-left:10px;">please make sure that your passwords match</p> <br>';
+            }
+            elseif ($_GET['error'] == "usertaken")
+            {
+                echo '<p style ="color: #DB0808">please try out another username , this one is already taken</p> <br>';
             }
 
           }

@@ -1,36 +1,36 @@
 x<?php
 
-class SignIn
+class SignIn extends talktoDB
 {
   private $email;
-  private $username;
   private $password;
 
+    public function __construct($email,$password)
+    {
+      $this->email = $email;
+      $this->password= $password;
+    }
 
-  public function setemail($email)
-  {
-    $this->email = $email;
-  }
+    public function registerClient()
+    {
+      if($this->isEmpty() == true)
+      {
+        header("Location: ../Frontpages/signin.php?error=emptyvariable");
+        exit();
+      }
+      $this->signingIn($this->email,$this->password);
+    }
 
-   public function getemail()
-{
-  return $this->email ;
-}
-public function setusername($username)
-{
-  $this->username = $username;
-}
-  public function getusername()
-  {
-  return $this->username ;;
-  }
-  public function setpassword($password)
-  {
-    $this->password= $password;
-  }
-
- public function getpassword()
-  {
-    return $this->password;
-  }
+    private function isEmpty()
+    {
+     $result = null;
+     if (empty($this->email) || empty($this->password))
+      {
+       $result = true;
+     }else
+     {
+       $result = false;
+     }
+      return $result;
+    }
 }
