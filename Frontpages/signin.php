@@ -17,11 +17,14 @@
        <button type="submit" class ="btnreg" name="submit">Sign In</button><br> <br>
      </form>
      <?php
-       if (isset($_GET['error']))
+       if (isset($_GET['login']))
        {
-         if ($_GET['error'] =="emptyvariable")
+         if ($_GET['login'] =="emptyvariable")
          {
            echo '<p style ="color: #DB0808; padding-left:80px;">please fill up all the form</p> <br>';
+         }elseif($_GET['login'] =="fail")
+         {
+            echo '<p style ="color: #DB0808; padding-left:80px;">Incorrect email or password</p> <br>';
          }
        }
 

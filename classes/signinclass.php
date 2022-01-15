@@ -15,7 +15,7 @@ class SignIn extends talktoDB
     {
       if($this->isEmpty() == true)
       {
-        header("Location: ../Frontpages/signin.php?error=emptyvariable");
+        header("Location: ../Frontpages/signin.php?login=emptyvariable");
         exit();
       }
       $this->signingIn($this->email,$this->password);
