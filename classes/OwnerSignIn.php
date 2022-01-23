@@ -1,6 +1,6 @@
 <?php
 
-class SignIn extends talktoDB
+class SignIn extends talktoDbOwner
 {
   private $email;
   private $password;
@@ -11,11 +11,11 @@ class SignIn extends talktoDB
       $this->password= $password;
     }
 
-    public function SignInClient()
+    public function SignInOwner()
     {
       if($this->isEmpty() == true)
       {
-        header("Location: ../Frontpages/signin.php?error=emptyvariable");
+        header("Location: ../Frontpages/ownerSignIn.php?error=emptyvariable");
         exit();
       }
       $this->signingIn($this->email,$this->password);

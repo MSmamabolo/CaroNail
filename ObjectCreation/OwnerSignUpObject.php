@@ -1,7 +1,7 @@
 <?php
   include '../classes/databaseconnection.php';
-  include '../classes/ModelTalkToDB.PHP';
-  include '../classes/signup.class.php';
+  include '../classes/ModelTalkToDbOwner.php';
+  include '../classes/ownerSignUp.php';
 
  if (!isset($_POST['submit']))
   {

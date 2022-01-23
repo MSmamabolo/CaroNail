@@ -4,8 +4,9 @@
     <meta charset="utf-8">
       <title>Caro</title>
       <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <link rel="stylesheet" href="../stylingCss/style.css">
+    <link rel="stylesheet" href="../stylingCss/styling.css">
     <link rel="stylesheet" href="../stylingCss/otherstyle.css">
+      <link rel="stylesheet" href="../stylingCss/footer.css">
     <style>
    input {
      text-align: center;

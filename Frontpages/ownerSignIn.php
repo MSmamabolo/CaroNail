@@ -27,7 +27,7 @@
   <body>
 <header >
   <?php
-     if (!isset($_SESSION['clientID']))
+     if (!isset($_SESSION['ownerID']))
 
       {
          ?>
@@ -60,7 +60,7 @@
           echo '<p style ="color: #DB0808;padding-left:26px;padding-top:8px;padding-bottom:8px"> you successfully signed up ,please login</p>';
         }
       ?>
-     <form class="" action="../ObjectCreation/signinObject.php" method="POST">
+     <form class="" action="../ObjectCreation/OwnerSignInObject.php" method="POST">
        <input type="text" name="usernameOremail" style=" border: 2px solid brown;opacity: 0.6;" placeholder="Username / email"> <br> <br>
        <input type="password" name="password" style=" border: 2px solid brown ;opacity: 0.6;" placeholder="Password"><br> <br>
        <button type="submit" class ="btnreg" style=" border: 2px solid brown;opacity: 0.6;" name="submit">Sign In</button><br> <br>
@@ -73,9 +73,8 @@
            echo '<p style ="color: #DB0808; padding-left:80px;">please fill up all the form</p> <br>';
          }
        }
-
       ?>
-     <p class="haveAccount">you dont have acoount?if yes please: <a style="color:#DB0808"class="haveAccount" href="signup.php">Click me</a></p> <br> <br>
+     <p class="haveAccount">you dont have acoount?if yes please: <a style="color:#DB0808"class="haveAccount" href="ownerSignUp.php">Click me</a></p> <br> <br>
    </div>
   </div>
 </div>

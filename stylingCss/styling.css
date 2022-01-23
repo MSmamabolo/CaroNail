@@ -119,6 +119,15 @@ input, select {
 {
   background-color:#FFE8E5;
 }*/
+.backgroundBodyImage
+{
+    width: 100%;
+    height: 800px;
+    background-image: url(../image/nail2.jpg);
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+
 header
 {
   width: 100%;
@@ -185,14 +194,7 @@ width:100%;
 }
 
 
-.backgroundBodyImage
-{
-    width: 100%;
-    height: 800px;
-    background-image: url(../image/nailss.jpg);
-    background-size:100%;
-    background-repeat:no-repeat;
-}
+
 .centerH
 {
   margin-left:530px;
@@ -214,7 +216,7 @@ width:100%;
 {
   width:310px;
   margin: 0 500px auto 650px;
-  background-color:#FFE8E5;
+  /*background-color:#FFE8E5;*/
 }
 
 

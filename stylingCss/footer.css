@@ -1,0 +1,43 @@
+footer
+{
+  width: 100%;
+  height: 200px;
+  margin-top: 6px;
+  background-color:#DEB2A4;
+
+
+}
+
+.section-footer
+{
+  width:100%;
+  height:200px;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content:space-around;
+
+}
+.articleFindus
+{
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+}
+.contactdetails
+{
+   padding-top:5px;
+  text-align: center;
+  color:white;
+
+}
+.mediaAccess
+{
+ color: white;
+ padding-top:5px;
+}
+.OWNER
+{
+   padding-top:5px;
+  text-align: center;
+}
