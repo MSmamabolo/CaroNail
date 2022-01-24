@@ -23,7 +23,6 @@
    }
  </style>
   </head>
-
   <body>
 <header >
   <?php
@@ -38,7 +37,6 @@
              <li><a href="#">UpdateMenu</a></li>
           <!--   <li><a href="service.php">Services</a></li>-->
              </ul>
-
            </nav>
          </section>
          <section class="right" >
@@ -61,10 +59,8 @@ if (isset($_SESSION['ownerID']))
   </div>
   <?php
 }?>
-
 <footer>
   <!--<section class="footer">-->
-
     <section class="section-footer">
       <article class="articleFindus">
         <h1>FIND ME</h1> <br>
@@ -93,7 +89,5 @@ if (isset($_SESSION['ownerID']))
     </article>
     </section>
 </footer>
-
   </body>
-
 </html>

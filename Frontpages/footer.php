@@ -31,7 +31,7 @@
     </article>
     <article class="OWNER">
 
-      <h1>SIGN UP SALON </h1><br>
+      <h1>SIGN UP SALON OWNER </h1><br>
 
       Sign Up salon <a href="ownerSignUp.php" style="color:red;">here</a>
 

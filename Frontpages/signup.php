@@ -58,7 +58,7 @@
      <form class="" action="../ObjectCreation/signupObject.php" method="POST">
        <input  type="text" name="email" style=" border: 2px solid brown;opacity: 0.6;"placeholder="Email"><br> <br>
        <input type="text" name="username" style=" border: 2px solid brown;opacity: 0.6;"placeholder="Username"> <br> <br>
-       <input type="text" name="mobileNumber" style=" border: 2px solid brown;opacity: 0.6;" placeholder="cellphone Number"> <br> <br>
+       <input type="number" name="mobileNumber" style=" border: 2px solid brown;opacity: 0.6;" placeholder="cellphone Number"> <br> <br>
        <input type="password" name="password" style=" border: 2px solid brown;opacity: 0.6;" placeholder="Password"><br> <br>
        <input type="password" name="passwordConfirm"style=" border: 2px solid brown;opacity: 0.6;" style=" border: 1px solid black;opacity: 0.6;"placeholder="Comfirm Password"><br> <br>
        <button type="submit" class ="btnreg" style=" border: 2px solid brown;opacity: 0.6;"name="submit">Sign Up</button><br> <br>
@@ -72,9 +72,18 @@
             }elseif ($_GET['error'] == "invalidEmail")
             {
                 echo '<p style ="color: #DB0808">please make sure that your email is in corrent format</p> <br>';
-            }elseif ($_GET['error'] == "invalidUsername")
+            }
+            elseif ($_GET['error'] == "invalidUsername")
             {
                 echo '<p style ="color: #DB0808">please make sure that your username includes alphabet and numbers only</p> <br>';
+            }
+            elseif ($_GET['error'] == "invalidphoneNumber")
+            {
+                echo '<p style ="color: #DB0808;padding-left:45px;">please correct your number phone</p> <br>';
+            }
+            elseif ($_GET['error'] == "phoneNumberNotTen")
+            {
+                echo '<p style ="color: #DB0808;padding-left:45px;">number phone must be 10 digits</p> <br>';
             }
             elseif ($_GET['error'] == "invalidpwdLength")
             {

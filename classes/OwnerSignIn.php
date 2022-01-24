@@ -15,7 +15,7 @@ class SignIn extends talktoDbOwner
     {
       if($this->isEmpty() == true)
       {
-        header("Location: ../Frontpages/ownerSignIn.php?error=emptyvariable");
+        header("Location: ../Frontpages/ownerSignIn.php?login=emptyvariable");
         exit();
       }
       $this->signingIn($this->email,$this->password);

@@ -8,7 +8,7 @@ class SignUp extends talktoDB
   private $password;
   private $comfirmPass;
 
-  public function __construct($email,$username,$mobileNumber,$password,$comfirmPass)
+  public function __construct($email,$username,int $mobileNumber,$password,$comfirmPass)
   {
     $this->email = $email;
     $this->username = $username;
@@ -32,7 +32,18 @@ class SignUp extends talktoDB
    {
      header("Location: ../Frontpages/signup.php?error=invalidUsername");
      exit();
-   }elseif($this->passwordLength()== false)
+   }
+   elseif($this->phoneLength() == false)
+   {
+     header("Location: ../Frontpages/signup.php?error=invalidphoneNumber");
+     exit();
+   }
+     elseif ($this->realphone() == false)
+      {
+        header("Location: ../Frontpages/signup.php?error=phoneNumberNotTen");
+        exit();
+     }
+   elseif($this->passwordLength()== false)
    {
      header("Location: ../Frontpages/signup.php?error=invalidpwdLength");
      exit();
@@ -89,6 +100,33 @@ private function invalidUsername()
    }
    return $result;
 }
+ private function phoneLength()
+ {
+   $result = null;
+   if (strlen($this->mobileNumber) > 10)
+    {
+     $result = false;
+   }else
+   {
+    $result = true;
+   }
+    return $result;
+ }
+
+ private function realphone()
+ {
+   $num_length = strlen((string)$this->mobileNumber);
+   $result = null;
+   if ($num_length  == 10)
+    {
+     $result = true;
+   }else
+   {
+    $result = false;
+   }
+    return $result;
+ }
+
 
 private function passwordLength()
 {
@@ -128,10 +166,4 @@ private function usertaken()
   }
   return $result;
 }
-
-
-
-
-
-
 }

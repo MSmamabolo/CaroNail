@@ -66,11 +66,14 @@
        <button type="submit" class ="btnreg" style=" border: 2px solid brown;opacity: 0.6;" name="submit">Sign In</button><br> <br>
      </form>
      <?php
-       if (isset($_GET['error']))
+       if (isset($_GET['login']))
        {
-         if ($_GET['error'] =="emptyvariable")
+         if ($_GET['login'] =="emptyvariable")
          {
            echo '<p style ="color: #DB0808; padding-left:80px;">please fill up all the form</p> <br>';
+         }elseif($_GET['login'] =="fail")
+         {
+            echo '<p style ="color: #DB0808; padding-left:55px;">something went wrong ,try again</p> <br>';
          }
        }
       ?>
